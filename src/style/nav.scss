@@ -1,0 +1,31 @@
+
+.nav {
+  @include width(100%, $xl-2, null, null, null, $lg);
+  top: 0;
+  @include zindex(fixed, 1);
+  @include transition;
+
+  &.show {
+    background-color: $black;
+  }
+
+  .nav__container {
+    @include flex(center, space-between, null);
+    top: 0;
+
+
+    .nav__logo {
+      @include positions(fixed, 0, null, 100px, null);
+      padding-left: $lg;
+      object-fit: contain;
+      cursor: pointer;
+    }
+
+    .nav__avatar {
+      cursor: pointer;
+      position: fixed;
+      right: $lg;
+      width: $xl-2;
+    }
+  }
+}

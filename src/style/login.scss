@@ -1,0 +1,96 @@
+.login {
+  position: relative;
+  height: 100%;
+  background: url("https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/netflixteaser.png");
+  background-size: cover;
+
+  .login_logo {
+    position: fixed;
+    top: $lg;
+    left: 0;
+    width: $xl-7;
+    object-fit: contain;
+    padding-left: $lg;
+  }
+
+  .login_btn {
+    @include default;
+    @include pa_ma(10px 20px, null);
+    font-weight: weight(medium);
+    position: fixed;
+    font-size: 1rem;
+    right: $lg;
+    top: $lg;
+    color: $white;
+    background-color: $primary;
+  }
+
+  .login_gradient {
+    width: 100%;
+    z-index: 1;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.8) 0,
+                    rgba(0, 0, 0, 0) 60%,
+                    rgba(0, 0, 0, 0.8) 100%);
+  }
+
+  .login_body {
+    @include zindex(absolute, 1);
+    @include pa_ma(0 $lg, null);
+    top: 30%;
+    color: $white;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    left: 0;
+    right: 0;
+
+    h1 {
+      font-size: 3.125rem;
+      margin-bottom: $lg;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: weight(regular);
+      margin-bottom: $xl-2;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      font-weight: weight(regular);
+    }
+
+    .login_input {
+      margin: $lg;
+
+      form {
+        @include flex(center, center, null);
+
+        input {
+          @include pa_ma(10px, null);
+          outline-width: 0;
+          font-size: 1rem;
+          height: 50px;
+          width: 30%;
+          border: none;
+          max-width: 600px;
+        }
+      }
+    }
+
+    .getStarted_btn {
+      @include pa_ma(10px 20px, null);
+      height: 50px;
+      font-size: $md;
+      color: $white;
+      background-color: $primary;
+      border: none;
+      font-weight: weight(medium);
+      cursor: pointer;
+    }
+  }
+}

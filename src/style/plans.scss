@@ -1,0 +1,17 @@
+.plan{
+  @include flex(center,space-between,null);
+  padding: $lg;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+  button {
+    padding: $xsm $lg;
+    font-size: 1rem;
+    color: $white;
+    background-color: $primary;
+    font-weight: weight(medium);
+    border: none;
+    cursor: pointer;
+  }
+}
